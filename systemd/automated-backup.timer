@@ -1,0 +1,11 @@
+[Unit]
+Description=Automated Backup System Timer
+
+[Timer]
+# Run every day at 3:00 AM
+OnCalendar=*-*-* 03:00:00
+Persistent=true
+RandomizedDelaySec=1800
+
+[Install]
+WantedBy=timers.target

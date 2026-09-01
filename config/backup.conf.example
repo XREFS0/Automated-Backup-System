@@ -1,0 +1,20 @@
+# Automated Backup System Configuration
+
+# Source directory or file to backup
+BACKUP_SOURCE="/path/to/source"
+
+# Destination directory for backup archives
+BACKUP_DESTINATION="/path/to/backups"
+
+# Backup format (currently supported: tar.gz)
+BACKUP_FORMAT="tar.gz"
+
+# Retention policy: Number of days to keep backups
+RETENTION_DAYS=30
+
+# Enable encryption (true/false) - feature foundation laid but implementation requires setup
+ENCRYPTION_ENABLED=false
+
+# Directory to store log files
+# Ensure this directory exists and is writable
+LOG_DIRECTORY="/var/log/automated-backup"

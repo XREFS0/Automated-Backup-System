@@ -1,0 +1,18 @@
+[Unit]
+Description=Automated Backup System Service
+After=network.target
+
+[Service]
+Type=oneshot
+# Update the path to match where you cloned the repository
+ExecStart=/opt/automated-backup-system/backup-manager.sh backup --force --quiet
+# Change the user if needed
+User=root
+Group=root
+
+# Security hardening
+ProtectSystem=strict
+# Update this to allow writing to your backup destination
+ReadWritePaths=/var/backups /var/log/automated-backup
+PrivateTmp=true
+NoNewPrivileges=true
